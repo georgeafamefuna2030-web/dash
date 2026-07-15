@@ -81,7 +81,7 @@ if (bell) {
 }
 
 //search
-const serach = document.querySelector(".search input");
+const search = document.querySelector(".search input");
 if (search) {
     search.addEventListener("keyup", function (){
         const value = this.value.toLowerCase();
@@ -97,9 +97,34 @@ if (search) {
     });
 }
 //chart.js
-const sales = document.getElementById("salesChart");
-if (sales) {
-    new CharacterData(sales, {
+
+    new Chart( document.getElementById("revenueChart"),
+     {
+        type: "doughnut",
+        data: {
+            labels: [
+                "products",
+                "Servuces",
+                "Subscriptions"
+            ],
+            datasets: [{
+                data: [
+                    45,
+                    35,
+                    20
+                ],
+                backgroundColor: [
+                    "#4f46e5",
+                    "#22c55e",
+                    "#f59e0b"
+                ]
+            }]
+        }
+    })
+
+const sale = document.getElementById("salesChart");
+if (sale) {
+    new Chart(sale, {
         type: "line",
         data: {
             labels: [
@@ -127,37 +152,14 @@ if (sales) {
                 tension: .4
             }]
         }
-    })
+    });
 }
 
-const revenue = document.getElementById("revenueChart");
-if (revenue) {
-    new CharacterData(revenue, {
-        type: "doughnut",
-        data: {
-            labels: [
-                "products",
-                "Servuces",
-                "Subscriptions"
-            ],
-            datasets: [{
-                data: [
-                    45,
-                    35,
-                    20
-                ],
-                backgroundColor: [
-                    "#4f46e5",
-                    "#22c55e",
-                    "#f59e0b"
-                ]
-            }]
-        }
-    })
-}
 
 //welcome message
 
+const welcome = document.querySelector(".welcome h1");
+if (welcome){
 const hour = new Date().getHours();
 let greeting = "";
 if(hour < 12){
@@ -168,8 +170,6 @@ if(hour < 12){
 }else{
     greeting = "good Evening";
 }
-const welcome = document.querySelector(".welcome h1");
-if(welcome){
-    welcome.innerText = greeting;
+ welcome.textContent= greeting;
 }
 console.log("AdminPro Dashboard Loaded Successfully");
