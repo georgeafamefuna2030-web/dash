@@ -451,7 +451,7 @@ header{
 }
 @media (max-width:600px) {
 .cards{
-    grid-template-columns: 1fr;
+    grid-template-columns:  1fr;
 }
 .profile div{
     display: none;

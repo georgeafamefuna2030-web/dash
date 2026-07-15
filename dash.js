@@ -164,7 +164,7 @@ if(hour < 12){
     greeting = "Good Mornning";
 
 }else if(hour < 18){
-    greeting = "Good Afternoon";
+    greeting = "Good  Afternoon";
 }else{
     greeting = "good Evening";
 }
