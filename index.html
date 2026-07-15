@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashborad</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <!--sidebar-->
+    <aside class="sidebar" id="sidebar">
+        <div class="logo">
+            <i class="fas fa-layer-group"></i>
+            <span>AdminPro</span>
+        </div>
+        <ul>
+            <li>
+                <a href="">
+                    <i class="fas fa-home"></i>
+                </a>
+                Dashboard
+            </li>
+             <li>
+                <a href="">
+                    <i class="fas fa-users"></i>
+                    Users
+                </a>
+            </li>
+             <li>
+                <a href="">
+                    <i class="fas fa-box"></i>
+                    Products
+                </a>
+            </li>
+             <li>
+                <a href="">
+                    <i class="fas fa-cart-shopping"></i>
+                    Orders
+                </a>
+            </li>
+             <li>
+                <a href="">
+                    <i class="fas fa-chart-line"></i>
+                    Analytics
+                </a>
+            </li>
+             <li>
+                <a href="">
+                    <i class="fas fa-calendar"></i>
+                    Calender
+                </a>
+            </li>
+             <li>
+                <a href="">
+                    <i class="fas fa-envelope"></i>
+                    Messages
+                </a>
+            </li> 
+            <li>
+                <a href="">
+                    <i class="fas fa-gear"></i>
+                    Settings
+                </a>
+            </li>
+             <li>
+                <a href="">
+                    <i class="fas fa-right-from-bracket"></i>
+                    Logout
+                </a>
+            </li>
+        </ul>
+
+    </aside>
+    <!--main-->
+    <div class="main">
+        <!--top navigation-->
+        <header>
+            <div class="left">
+                <button id="menuBtn">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <h2>Dashboard</h2>
+            </div>
+            <div class="search">
+                <input type="search" placeholder="search...">
+                <i class="fas fa-search"></i>
+            </div>
+            <div class="right">
+                <div class="notification">
+                <i class="fas fa-bell"></i>
+                <span>5</span>
+                </div>
+                <button id="themeBtn">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <div class="profile">
+                    <img src="IMG_0538.JPG" alt="profile">
+                    <div>
+                        <h4>George Afamefuna</h4>
+                        <p>Administrator</p>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!--welcome-->
+        <section class="welcome">
+            <h1>Welcome Back</h1>
+            <p>Here's what's happening today.</p>
+
+        </section>
+        <!--dashboard cards-->
+        <section class="cards">
+            <div class="card">
+                <div class="icon users">
+                    <i class="fas fa-users"></i>
+                </div>
+                <div>
+                    <h3>12,450</h3>
+                    <p>Total Users</p>
+                </div>
+            </div>
+            <div class="card">
+                 <div class="icon revenue">
+                    <i class="fas fa-dollar-sign"></i>
+                </div>
+                <div>
+                    <h3>$45,600</h3>
+                    <p>Revenue</p>
+                </div>
+            </div>
+            <div class="card">
+                 <div class="icon orders">
+                    <i class="fas fa-cart-shopping"></i>
+                </div>
+                <div>
+                    <h3>860</h3>
+                    <p>Orders</p>
+                </div>
+            </div>
+            <div class="card">
+                 <div class="icon visitors">
+                    <i class="fas fa-eye"></i>
+                </div>
+                <div>
+                    <h3>26,320</h3>
+                    <p>Visitors</p>
+                </div>
+            </div>
+        </section>
+        <!--charts-->
+        <section class="charts">
+<div class="chart-box">
+    <h3>Sales Overview</h3>
+    <canvas id="salesChart"></canvas>
+
+</div>
+<div class="chart-box">
+    <h3>Revenue</h3>
+    <canvas class="revenueChart"></canvas>
+</div>
+        </section>
+        <!--Recent Orders-->
+        <section class="table-box">
+            <h3>Recent Orders</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Customer</th>
+                        <th>Product</th>
+                        <th>Status</th>
+                        <th>Amount</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>#1002</td>
+                        <td>John</td>
+                        <td>Laptop</td>
+                        <td><span class="status delivered">Delivered</span></td>
+                        <td>$320</td>
+                    </tr>
+                    <tr>
+                     <td>#1002</td>
+                        <td>Emmanuel</td>
+                        <td>Phone</td>
+                        <td><span class="status delivered">Delivered</span></td>
+                        <td>$370</td>
+                        </tr>
+                        <tr>
+                     <td>#1212</td>
+                        <td>King</td>
+                        <td>mouse</td>
+                        <td><span class="status delivered">Delivered</span></td>
+                        <td>$10</td>
+                        </tr>
+                        <tr>
+                     <td>#1022</td>
+                        <td>Samuel</td>
+                        <td>Laptop battery</td>
+                        <td><span class="status processing">processing</span></td>
+                        <td>$21</td>
+                        </tr>
+                        <tr>
+                     <td>#1012</td>
+                        <td>James</td>
+                        <td>Zealot</td>
+                        <td><span class="status pending">Pending</span></td>
+                        <td>$60</td>
+                        </tr>
+                </tbody>
+            </table>
+        </section>
+        <footer>
+            &copy;2026 AdminPro Dashboard. All Right Reserved.
+        </footer>
+    </div>
+    <!--chart.js-->
+    <script></script>
+    <!--javascript-->
+    <script src="dash.js"></script>
+</body>
+</html>
