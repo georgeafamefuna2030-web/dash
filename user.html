@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Management</title>
+    <link rel="stylesheet" href="user.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+<body>
+    <div class="container">
+    <!--sidebar-->
+    <aside class="sidebar" id="sidebar">
+        <div class="logo">
+            <i class="fas fa-layer-group"></i>
+            <span>AdminPro</span>
+        </div>
+        <ul>
+            <li>
+                <a href="">
+                    <i class="fas fa-home"></i>
+                </a>
+                dashboard
+            </li>
+             <li>
+                <a href="">
+                    <i class="fas fa-users"></i>
+                    Users
+                </a>
+            </li>
+             <li>
+                <a href="">
+                    <i class="fas fa-box"></i>
+                    Products
+                </a>
+            </li>
+             <li>
+                <a href="">
+                    <i class="fas fa-chart-line"></i>
+                    Analytics
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <i class="fas fa-gear"></i>
+                    Settings
+                </a>
+            </li>
+             </ul>
+
+    </aside>
+    <!---main-->
+    <main class="main">
+        <header>
+            <h1>User Management</h1>
+            <button id="addUser">
+                <i class="fas fa-plus"></i>
+                Add User
+            </button>
+        </header>
+        <!--search-->
+        <div class="search-box">
+            <input type="text" id="search" placeholder="search users...">
+        </div>
+        <!--Table-->
+        <table>
+            <thead>
+                <tr>
+                    <th>Avatar</th>
+                    <th>Full Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Role</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="userTable">
+
+            </tbody>
+        </table>
+    </main>
+</div>
+<!-- modal-->
+ <div class="modal" id="modal">
+    <div class="modal-content">
+        <h2>Add User</h2>
+        <form action="" id="userForm">
+            <input type="text" id="fullName" placeholder="Full Name" required>
+            <input type="email" id="email" placeholder="Email" required>
+            <input type="tel" placeholder="Phone Number" id="phone">
+            <select  id="role">
+                <option value="">User</option>
+                <option value="">Admin</option>
+                <option value="">Manager</option>
+            </select>
+            <button type="submit">
+                Save User
+            </button>
+        </form>
+    </div>
+ </div>
+ <script src="user.js"></script>
+</body>
+</html>

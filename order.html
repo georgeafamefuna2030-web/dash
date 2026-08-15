@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Orders Management</title>
+
+    <link rel="stylesheet" href="order.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- =========================
+         Sidebar
+    ========================== -->
+
+    <aside class="sidebar">
+
+        <h2>AdminPro</h2>
+
+        <ul>
+
+            <li>
+                <a href="index.html">
+                    <i class="fas fa-home"></i>
+                    Dashboard
+                </a>
+            </li>
+
+            <li>
+                <a href="user.html">
+                    <i class="fas fa-users"></i>
+                    Users
+                </a>
+            </li>
+
+            <li>
+                <a href="product.html">
+                    <i class="fas fa-box"></i>
+                    Products
+                </a>
+            </li>
+
+            <li class="active">
+                <a href="order.html">
+                    <i class="fas fa-shopping-cart"></i>
+                    Orders
+                </a>
+            </li>
+
+            <li>
+                <a href="#">
+                    <i class="fas fa-chart-line"></i>
+                    Analytics
+                </a>
+            </li>
+
+            <li>
+                <a href="#">
+                    <i class="fas fa-cog"></i>
+                    Settings
+                </a>
+            </li>
+
+        </ul>
+
+    </aside>
+
+
+    <!-- =========================
+         Main Content
+    ========================== -->
+
+    <main class="main">
+
+        <header>
+
+            <div>
+                <h1>Orders Management</h1>
+
+                <p>
+                    Manage and track customer orders
+                </p>
+            </div>
+
+            <button id="addOrder">
+
+                <i class="fas fa-plus"></i>
+
+                Add Order
+
+            </button>
+
+        </header>
+
+
+        <!-- =========================
+             Statistics
+        ========================== -->
+
+        <section class="stats">
+
+            <div class="stat-card">
+
+                <div class="stat-icon">
+                    <i class="fas fa-shopping-cart"></i>
+                </div>
+
+                <div>
+                    <h3 id="totalOrders">0</h3>
+                    <p>Total Orders</p>
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon">
+                    <i class="fas fa-clock"></i>
+                </div>
+
+                <div>
+                    <h3 id="pendingOrders">0</h3>
+                    <p>Pending</p>
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon">
+                    <i class="fas fa-truck"></i>
+                </div>
+
+                <div>
+                    <h3 id="shippedOrders">0</h3>
+                    <p>Shipped</p>
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+
+                <div>
+                    <h3 id="deliveredOrders">0</h3>
+                    <p>Delivered</p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             Search & Filter
+        ========================== -->
+
+        <section class="tools">
+
+            <input
+                type="text"
+                id="search"
+                placeholder="Search order, customer or email...">
+
+
+            <select id="statusFilter">
+
+                <option value="all">
+                    All Orders
+                </option>
+
+                <option value="Pending">
+                    Pending
+                </option>
+
+                <option value="Processing">
+                    Processing
+                </option>
+
+                <option value="Shipped">
+                    Shipped
+                </option>
+
+                <option value="Delivered">
+                    Delivered
+                </option>
+
+                <option value="Cancelled">
+                    Cancelled
+                </option>
+
+            </select>
+
+        </section>
+
+
+        <!-- =========================
+             Orders Table
+        ========================== -->
+
+        <div class="table-container">
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>Order ID</th>
+
+                        <th>Customer</th>
+
+                        <th>Product</th>
+
+                        <th>Amount</th>
+
+                        <th>Date</th>
+
+                        <th>Status</th>
+
+                        <th>Actions</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody id="orderTable">
+
+                    <!-- Orders will be inserted here -->
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </main>
+
+</div>
+
+
+<!-- =========================
+     Add Order Modal
+========================== -->
+
+<div class="modal" id="modal">
+
+    <div class="modal-content">
+
+        <div class="modal-header">
+
+            <h2>Add Order</h2>
+
+            <button id="closeModal">
+                &times;
+            </button>
+
+        </div>
+
+
+        <form id="orderForm">
+
+            <label>
+                Customer Name
+            </label>
+
+            <input
+                type="text"
+                id="customerName"
+                placeholder="Customer name"
+                required>
+
+
+            <label>
+                Customer Email
+            </label>
+
+            <input
+                type="email"
+                id="customerEmail"
+                placeholder="Customer email"
+                required>
+
+
+            <label>
+                Product
+            </label>
+
+            <input
+                type="text"
+                id="orderProduct"
+                placeholder="Product name"
+                required>
+
+
+            <label>
+                Amount
+            </label>
+
+            <input
+                type="number"
+                id="orderAmount"
+                placeholder="Order amount"
+                min="0"
+                required>
+
+
+            <label>
+                Order Status
+            </label>
+
+            <select id="orderStatus">
+
+                <option value="Pending">
+                    Pending
+                </option>
+
+                <option value="Processing">
+                    Processing
+                </option>
+
+                <option value="Shipped">
+                    Shipped
+                </option>
+
+                <option value="Delivered">
+                    Delivered
+                </option>
+
+                <option value="Cancelled">
+                    Cancelled
+                </option>
+
+            </select>
+
+
+            <button type="submit">
+
+                Save Order
+
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+
+<script src="order.js"></script>
+
+</body>
+</html>

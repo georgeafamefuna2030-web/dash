@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Analytics</title>
+    
+
+    <link rel="stylesheet" href="analytic.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- =========================
+         Sidebar
+    ========================== -->
+
+    <aside class="sidebar">
+
+        <h2>AdminPro</h2>
+
+        <ul>
+
+            <li>
+                <a href="index.html">
+                    <i class="fas fa-home"></i>
+                    Dashboard
+                </a>
+            </li>
+
+            <li>
+                <a href="user.html">
+                    <i class="fas fa-users"></i>
+                    Users
+                </a>
+            </li>
+
+            <li>
+                <a href="product.html">
+                    <i class="fas fa-box"></i>
+                    Products
+                </a>
+            </li>
+
+            <li>
+                <a href="order.html">
+                    <i class="fas fa-shopping-cart"></i>
+                    Orders
+                </a>
+            </li>
+
+            <li class="active">
+                <a href="analytic.html">
+                    <i class="fas fa-chart-line"></i>
+                    Analytics
+                </a>
+            </li>
+
+            <li>
+                <a href="#">
+                    <i class="fas fa-cog"></i>
+                    Settings
+                </a>
+            </li>
+
+        </ul>
+
+    </aside>
+
+
+    <!-- =========================
+         Main Content
+    ========================== -->
+
+    <main class="main">
+
+        <header>
+
+            <div>
+                <h1>Analytics</h1>
+
+                <p>
+                    Monitor your business performance
+                </p>
+            </div>
+
+        </header>
+
+
+        <!-- =========================
+             Statistics
+        ========================== -->
+
+        <section class="stats">
+
+            <div class="stat-card">
+
+                <div class="stat-icon">
+                    <i class="fas fa-users"></i>
+                </div>
+
+                <div>
+                    <h3 id="usersCount">0</h3>
+                    <p>Total Users</p>
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon">
+                    <i class="fas fa-box"></i>
+                </div>
+
+                <div>
+                    <h3 id="productsCount">0</h3>
+                    <p>Total Products</p>
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon">
+                    <i class="fas fa-shopping-cart"></i>
+                </div>
+
+                <div>
+                    <h3 id="ordersCount">0</h3>
+                    <p>Total Orders</p>
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon">
+                    <i class="fas fa-money-bill"></i>
+                </div>
+
+                <div>
+                    <h3 id="revenue">
+                        ₦0.00
+                    </h3>
+
+                    <p>Total Revenue</p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             Charts
+        ========================== -->
+
+        <section class="charts">
+
+            <!-- Sales Chart -->
+
+            <div class="chart-card">
+
+                <div class="chart-header">
+
+                    <h2>Sales Overview</h2>
+
+                    <select id="salesPeriod">
+
+                        <option value="7">
+                            Last 7 Days
+                        </option>
+
+                        <option value="30">
+                            Last 30 Days
+                        </option>
+
+                        <option value="12">
+                            Last 12 Months
+                        </option>
+
+                    </select>
+
+                </div>
+
+                <canvas id="salesChart"></canvas>
+
+            </div>
+
+
+            <!-- Orders Chart -->
+
+            <div class="chart-card">
+
+                <h2>Orders Status</h2>
+
+                <canvas id="ordersChart"></canvas>
+
+            </div>
+
+
+            <!-- Products Chart -->
+
+            <div class="chart-card">
+
+                <h2>Products by Stock</h2>
+
+                <canvas id="productsChart"></canvas>
+
+            </div>
+
+
+            <!-- Users Chart -->
+
+            <div class="chart-card">
+
+                <h2>User Overview</h2>
+
+                <canvas id="usersChart"></canvas>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+
+<script src="analytic.js"></script>
+
+</body>
+</html>

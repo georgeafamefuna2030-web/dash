@@ -1,0 +1,321 @@
+/* ==========================
+   Google Font
+========================== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* ==========================
+   Reset
+========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#f4f6f9;
+    color:#333;
+}
+
+/* ==========================
+   Layout
+========================== */
+
+.container{
+    display:flex;
+    min-height:100vh;
+}
+
+/* ==========================
+   Sidebar
+========================== */
+
+.sidebar{
+    width:260px;
+    background:#111827;
+    color:#fff;
+    padding:20px;
+}
+
+.sidebar h2{
+    margin-bottom:30px;
+}
+
+.sidebar ul{
+    list-style:none;
+}
+
+.sidebar li{
+    margin-bottom:10px;
+}
+
+.sidebar a{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    color:#fff;
+    text-decoration:none;
+    padding:12px;
+    border-radius:8px;
+    transition:.3s;
+}
+
+.sidebar a:hover,
+.sidebar .active a{
+    background:#4f46e5;
+}
+
+/* ==========================
+   Main
+========================== */
+
+.main{
+    flex:1;
+    padding:30px;
+}
+
+/* ==========================
+   Header
+========================== */
+
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:25px;
+}
+
+header h1{
+    font-size:30px;
+}
+
+header button{
+    padding:12px 18px;
+    border:none;
+    border-radius:8px;
+    background:#4f46e5;
+    color:#fff;
+    cursor:pointer;
+    transition:.3s;
+}
+
+header button:hover{
+    background:#3730a3;
+}
+
+/* ==========================
+   Search
+========================== */
+
+.search-box{
+    margin-bottom:20px;
+}
+
+.search-box input{
+    width:100%;
+    padding:14px;
+    border:1px solid #ddd;
+    border-radius:8px;
+    outline:none;
+}
+
+.search-box input:focus{
+    border-color:#4f46e5;
+}
+
+/* ==========================
+   Table
+========================== */
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    background:#fff;
+    border-radius:12px;
+    overflow:hidden;
+    box-shadow:0 10px 20px rgba(0,0,0,.08);
+}
+
+thead{
+    background:#4f46e5;
+    color:#fff;
+}
+
+th,
+td{
+    padding:15px;
+    text-align:left;
+}
+
+tbody tr{
+    border-bottom:1px solid #eee;
+}
+
+tbody tr:hover{
+    background:#f8fafc;
+}
+
+/* ==========================
+   Product Image
+========================== */
+
+.product-image{
+    width:60px;
+    height:60px;
+    border-radius:10px;
+    object-fit:cover;
+}
+
+/* ==========================
+   Stock Status
+========================== */
+
+.status{
+    padding:6px 12px;
+    border-radius:20px;
+    color:#fff;
+    font-size:13px;
+    font-weight:500;
+}
+
+.in-stock{
+    background:#22c55e;
+}
+
+.low-stock{
+    background:#f59e0b;
+}
+
+.out-stock{
+    background:#ef4444;
+}
+
+/* ==========================
+   Action Buttons
+========================== */
+
+.edit-btn,
+.delete-btn{
+
+    padding:8px 12px;
+    border:none;
+    border-radius:6px;
+    color:#fff;
+    cursor:pointer;
+    margin-right:5px;
+}
+
+.edit-btn{
+    background:#3b82f6;
+}
+
+.delete-btn{
+    background:#ef4444;
+}
+
+/* ==========================
+   Modal
+========================== */
+
+.modal{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.5);
+    display:none;
+    justify-content:center;
+    align-items:center;
+}
+
+.modal.active{
+    display:flex;
+}
+
+.modal-content{
+    background:#fff;
+    width:450px;
+    max-width:95%;
+    padding:25px;
+    border-radius:12px;
+    animation:popup .3s ease;
+}
+
+.modal-content h2{
+    margin-bottom:20px;
+}
+
+.modal-content input{
+    width:100%;
+    padding:12px;
+    margin-bottom:15px;
+    border:1px solid #ddd;
+    border-radius:8px;
+}
+
+.modal-content button{
+    width:100%;
+    padding:14px;
+    border:none;
+    border-radius:8px;
+    background:#4f46e5;
+    color:#fff;
+    cursor:pointer;
+}
+
+.modal-content button:hover{
+    background:#3730a3;
+}
+
+/* ==========================
+   Animation
+========================== */
+
+@keyframes popup{
+
+    from{
+        opacity:0;
+        transform:scale(.8);
+    }
+
+    to{
+        opacity:1;
+        transform:scale(1);
+    }
+
+}
+
+/* ==========================
+   Responsive
+========================== */
+
+@media(max-width:900px){
+
+    .container{
+        flex-direction:column;
+    }
+
+    .sidebar{
+        width:100%;
+    }
+
+    table{
+        display:block;
+        overflow-x:auto;
+    }
+
+}
+
+@media(max-width:600px){
+
+    header{
+        flex-direction:column;
+        gap:15px;
+        align-items:flex-start;
+    }
+
+    header button{
+        width:100%;
+    }
+
+}

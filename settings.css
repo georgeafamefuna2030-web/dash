@@ -1,0 +1,530 @@
+/* ==========================
+   Reset
+========================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+
+/* ==========================
+   Body
+========================== */
+
+body {
+    background: #f4f6f9;
+    color: #333;
+}
+
+
+/* ==========================
+   Layout
+========================== */
+
+.container {
+    display: flex;
+    min-height: 100vh;
+}
+
+
+/* ==========================
+   Sidebar
+========================== */
+
+.sidebar {
+    width: 260px;
+    min-height: 100vh;
+    background: #111827;
+    color: white;
+    padding: 20px;
+    flex-shrink: 0;
+}
+
+.sidebar h2 {
+    margin-bottom: 30px;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar li {
+    margin-bottom: 10px;
+}
+
+.sidebar a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    padding: 12px;
+
+    color: white;
+    text-decoration: none;
+
+    border-radius: 8px;
+
+    transition: 0.3s;
+}
+
+.sidebar a:hover,
+.sidebar .active a {
+    background: #4f46e5;
+}
+
+
+/* ==========================
+   Main
+========================== */
+
+.main {
+    flex: 1;
+    padding: 30px;
+    max-width: 1200px;
+}
+
+
+/* ==========================
+   Header
+========================== */
+
+header {
+    margin-bottom: 30px;
+}
+
+header h1 {
+    font-size: 30px;
+    margin-bottom: 5px;
+}
+
+header p {
+    color: #777;
+    font-size: 14px;
+}
+
+
+/* ==========================
+   Settings Card
+========================== */
+
+.settings-card {
+    background: white;
+
+    padding: 25px;
+
+    margin-bottom: 20px;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 5px 15px rgba(0, 0, 0, 0.06);
+}
+
+
+/* ==========================
+   Card Header
+========================== */
+
+.card-header {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-bottom: 25px;
+
+    padding-bottom: 15px;
+
+    border-bottom: 1px solid #eee;
+}
+
+.card-header h2 {
+    font-size: 20px;
+
+    margin-bottom: 4px;
+}
+
+.card-header p {
+    color: #777;
+
+    font-size: 13px;
+}
+
+.card-header > i {
+    width: 45px;
+    height: 45px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 10px;
+
+    background: #eef2ff;
+
+    color: #4f46e5;
+
+    font-size: 18px;
+}
+
+
+/* ==========================
+   Form
+========================== */
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display: block;
+
+    margin-bottom: 7px;
+
+    font-size: 14px;
+
+    font-weight: 500;
+}
+
+.form-group input {
+    width: 100%;
+
+    padding: 12px 14px;
+
+    border: 1px solid #ddd;
+
+    border-radius: 8px;
+
+    outline: none;
+
+    font-size: 14px;
+
+    transition: 0.3s;
+}
+
+.form-group input:focus {
+    border-color: #4f46e5;
+
+    box-shadow:
+        0 0 0 3px rgba(79, 70, 229, 0.1);
+}
+
+
+/* ==========================
+   Save Button
+========================== */
+
+.save-btn {
+    padding: 12px 18px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: #4f46e5;
+
+    color: white;
+
+    cursor: pointer;
+
+    font-size: 14px;
+
+    transition: 0.3s;
+}
+
+.save-btn:hover {
+    background: #3730a3;
+}
+
+.save-btn i {
+    margin-right: 7px;
+}
+
+
+/* ==========================
+   Setting Rows
+========================== */
+
+.setting-row {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding: 18px 0;
+
+    border-bottom: 1px solid #eee;
+}
+
+.setting-row:last-child {
+    border-bottom: none;
+}
+
+.setting-row h3 {
+    font-size: 15px;
+
+    margin-bottom: 4px;
+}
+
+.setting-row p {
+    color: #777;
+
+    font-size: 13px;
+}
+
+
+/* ==========================
+   Toggle Switch
+========================== */
+
+.switch {
+    position: relative;
+
+    width: 52px;
+    height: 28px;
+
+    flex-shrink: 0;
+}
+
+.switch input {
+    opacity: 0;
+
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+
+    inset: 0;
+
+    background: #d1d5db;
+
+    border-radius: 30px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.slider::before {
+    content: "";
+
+    position: absolute;
+
+    width: 22px;
+    height: 22px;
+
+    left: 3px;
+    top: 3px;
+
+    background: white;
+
+    border-radius: 50%;
+
+    transition: 0.3s;
+
+    box-shadow:
+        0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.switch input:checked + .slider {
+    background: #4f46e5;
+}
+
+.switch input:checked + .slider::before {
+    transform: translateX(24px);
+}
+
+
+/* ==========================
+   Danger Zone
+========================== */
+
+.danger-zone {
+    border: 1px solid #fecaca;
+}
+
+.danger-zone .card-header > i {
+    background: #fee2e2;
+
+    color: #dc2626;
+}
+
+.danger-btn {
+    padding: 12px 18px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: #ef4444;
+
+    color: white;
+
+    cursor: pointer;
+
+    font-size: 14px;
+
+    transition: 0.3s;
+}
+
+.danger-btn:hover {
+    background: #dc2626;
+}
+
+.danger-btn i {
+    margin-right: 7px;
+}
+
+
+/* ==========================
+   Dark Mode
+========================== */
+
+body.dark-mode {
+    background: #0f172a;
+
+    color: #f8fafc;
+}
+
+body.dark-mode .settings-card {
+    background: #1e293b;
+
+    color: #f8fafc;
+}
+
+body.dark-mode .card-header {
+    border-color: #334155;
+}
+
+body.dark-mode .card-header p,
+body.dark-mode .setting-row p {
+    color: #94a3b8;
+}
+
+body.dark-mode .setting-row {
+    border-color: #334155;
+}
+
+body.dark-mode .form-group input {
+    background: #0f172a;
+
+    color: white;
+
+    border-color: #475569;
+}
+
+body.dark-mode .form-group input::placeholder {
+    color: #94a3b8;
+}
+
+body.dark-mode .card-header > i {
+    background: #312e81;
+}
+
+body.dark-mode .danger-zone {
+    border-color: #7f1d1d;
+}
+
+
+/* ==========================
+   Compact Sidebar
+========================== */
+
+body.compact-sidebar .sidebar {
+    width: 85px;
+}
+
+body.compact-sidebar .sidebar h2 {
+    font-size: 0;
+
+    text-align: center;
+}
+
+body.compact-sidebar .sidebar h2::after {
+    content: "A";
+
+    font-size: 24px;
+}
+
+body.compact-sidebar .sidebar a {
+    justify-content: center;
+}
+
+body.compact-sidebar .sidebar a i {
+    margin: 0;
+}
+
+body.compact-sidebar .sidebar a {
+    font-size: 0;
+}
+
+body.compact-sidebar .sidebar a i {
+    font-size: 17px;
+}
+
+
+/* ==========================
+   Responsive
+========================== */
+
+@media (max-width: 900px) {
+
+    .container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+
+        min-height: auto;
+    }
+
+    .main {
+        padding: 20px;
+    }
+
+    body.compact-sidebar .sidebar {
+        width: 100%;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .settings-card {
+        padding: 18px;
+    }
+
+    .card-header {
+        gap: 15px;
+    }
+
+    .setting-row {
+        align-items: flex-start;
+    }
+
+    .setting-row h3 {
+        font-size: 14px;
+    }
+
+    .setting-row p {
+        font-size: 12px;
+    }
+
+    .save-btn,
+    .danger-btn {
+        width: 100%;
+    }
+
+}

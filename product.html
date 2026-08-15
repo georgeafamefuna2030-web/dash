@@ -1,0 +1,176 @@
+
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Management</title>
+
+    <link rel="stylesheet" href="product.css">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body>
+
+<div class="container">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+
+        <h2>AdminPro</h2>
+
+        <ul>
+
+            <li>
+                <a href="index.html">
+                    <i class="fas fa-home"></i>
+                    Dashboard
+                </a>
+            </li>
+
+            <li>
+                <a href="user.html">
+                    <i class="fas fa-users"></i>
+                    Users
+                </a>
+            </li>
+
+            <li class="active">
+                <a href="#">
+                    <i class="fas fa-box"></i>
+                    Products
+                </a>
+            </li>
+
+            <li>
+                <a href="#">
+                    <i class="fas fa-chart-line"></i>
+                    Analytics
+                </a>
+            </li>
+
+            <li>
+                <a href="#">
+                    <i class="fas fa-gear"></i>
+                    Settings
+                </a>
+            </li>
+
+        </ul>
+
+    </aside>
+
+    <!-- Main Content -->
+
+    <main class="main">
+
+        <header>
+
+            <h1>Product Management</h1>
+
+            <button id="addProduct">
+                <i class="fas fa-plus"></i>
+                Add Product
+            </button>
+
+        </header>
+
+        <div class="search-box">
+
+            <input
+                type="text"
+                id="search"
+                placeholder="Search products...">
+
+        </div>
+
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th>Image</th>
+
+                    <th>Name</th>
+
+                    <th>Category</th>
+
+                    <th>Price</th>
+
+                    <th>Stock</th>
+
+                    <th>Status</th>
+
+                    <th>Actions</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody id="productTable">
+
+            </tbody>
+
+        </table>
+
+    </main>
+
+</div>
+
+<!-- Product Modal -->
+
+<div class="modal" id="modal">
+
+    <div class="modal-content">
+
+        <h2>Add Product</h2>
+
+        <form id="productForm">
+
+            <input
+                type="text"
+                id="productName"
+                placeholder="Product Name"
+                required>
+
+            <input
+                type="text"
+                id="category"
+                placeholder="Category"
+                required>
+
+            <input
+                type="number"
+                id="price"
+                placeholder="Price"
+                required>
+
+            <input
+                type="number"
+                id="stock"
+                placeholder="Stock Quantity"
+                required>
+
+            <input
+                type="url"
+                id="image"
+                placeholder="Image URL">
+
+            <button type="submit">
+
+                Save Product
+
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+<script src="product.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account</title>
+    <link rel="stylesheet" href="register.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="left">
+            <h1>Join AdminPro</h1>
+            <p>
+                Create Your account to manage your dashboard, users, products and analytics.
+            </p>
+        </div>
+        <div class="right">
+            <form action="" id="registerForm">
+                <h2>Create Account</h2>
+                <div class="input-box">
+                    <i class="fas fa-user"></i>
+                    <input type="text" id="fullname" placeholder="Full Name" required>
+                </div>
+                <div class="input-box">
+                    <i class="fas fa-at"></i>
+                    <input type="text" id="username" placeholder="username" required>
+                </div>
+                <div class="input-box">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" id="email" placeholder="Email Address" required>
+                </div>
+                <div class="input-box">
+                    <i class="fas fa-phone"></i>
+                    <input type="tel" id="phone" placeholder="Phone Number" required>
+                </div>
+                <div class="input-box">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" id="password" placeholder="Password" required>
+                    <i class="fas fa-eye" id="togglePassword"></i>
+                </div>
+                <div class="input-box">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" id="password" placeholder="Confirm Password" required>
+                </div>
+                <div class="strength">
+                    <div class="bar">
+                        <div id="strengthBar"></div>
+                    </div>
+                    <small id="strengthText">Password Strength</small>
+                </div>
+                <div class="upload">
+                    <img src="" id="preview" alt="" width="120" height="120">
+                    <label for="profileImage">
+                        <i class="fas fa-image"></i>
+                        Upload Profile Picture
+                    </label>
+                    <input type="file" id="profileImage" accept="image/*">
+                </div>
+                <label for="" class="terms">
+                    <input type="checkbox" required>
+                    I agree to the Terms & Conditions
+                </label>
+                <button type="submit">
+                    Create Account
+                </button>
+                <p>
+Already have an Account?
+<a href="login.html">Login</a>
+                </p>
+
+            </form>
+        </div>
+    </div>
+    <script src="register.js"></script>
+</body>
+</html>
