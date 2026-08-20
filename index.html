@@ -1,225 +1,724 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Dashborad</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>AdminPro - Dashboard</title>
+
+    <!-- Main Dashboard CSS -->
+    <link rel="stylesheet"
+          href="style.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
 </head>
+
+
 <body>
-    <!--sidebar-->
-    <aside class="sidebar" id="sidebar">
+
+
+<div class="container">
+
+
+    <!-- =================================
+         SIDEBAR
+    ================================== -->
+
+    <aside class="sidebar">
+
         <div class="logo">
-            <i class="fas fa-layer-group"></i>
-            <span>AdminPro</span>
+
+            <h2>AdminPro</h2>
+
         </div>
-        <ul>
-            <li>
+
+
+        <ul class="sidebar-menu">
+
+
+            <li class="active">
+
                 <a href="index.html">
+
                     <i class="fas fa-home"></i>
+
+                    <span>Dashboard</span>
+
                 </a>
-                dashboard
+
             </li>
-             <li>
-                <a href="user.html">
-                    <i class="fas fa-users"></i>
-                    Users
-                </a>
-            </li>
-             <li>
-                <a href="product.html">
-                    <i class="fas fa-box"></i>
-                    Products
-                </a>
-            </li>
-             <li>
-                <a href="order.html">
-                    <i class="fas fa-cart-shopping"></i>
-                    Orders
-                </a>
-            </li>
-             <li>
-                <a href="analytic.html">
-                    <i class="fas fa-chart-line"></i>
-                    Analytics
-                </a>
-            </li>
-             <li>
-                <a href="">
-                    <i class="fas fa-calendar"></i>
-                    Calender
-                </a>
-            </li>
-             <li>
-                <a href="">
-                    <i class="fas fa-envelope"></i>
-                    Messages
-                </a>
-            </li> 
+
+
             <li>
-                <a href="">
-                    <i class="fas fa-gear"></i>
-                    Settings
+
+                <a href="user.html">
+
+                    <i class="fas fa-users"></i>
+
+                    <span>Users</span>
+
                 </a>
+
             </li>
-             <li>
-                <a href="">
-                    <i class="fas fa-right-from-bracket"></i>
-                    Logout
+
+
+            <li>
+
+                <a href="product.html">
+
+                    <i class="fas fa-box"></i>
+
+                    <span>Products</span>
+
                 </a>
+
             </li>
+
+
+            <li>
+
+                <a href="order.html">
+
+                    <i class="fas fa-shopping-cart"></i>
+
+                    <span>Orders</span>
+
+                </a>
+
+            </li>
+
+
+            <li>
+
+                <a href="analytic.html">
+
+                    <i class="fas fa-chart-line"></i>
+
+                    <span>Analytics</span>
+
+                </a>
+
+            </li>
+
+
+            <li>
+
+                <a href="settings.html">
+
+                    <i class="fas fa-cog"></i>
+
+                    <span>Settings</span>
+
+                </a>
+
+            </li>
+
+
         </ul>
 
+
+        <!-- Logout -->
+
+        <div class="sidebar-bottom">
+
+            <a href="login.html"
+               id="logoutBtn">
+
+                <i class="fas fa-sign-out-alt"></i>
+
+                <span>Logout</span>
+
+            </a>
+
+        </div>
+
+
     </aside>
-    <!--main-->
-    <div class="main">
-        <!--top navigation-->
-        <header>
-            <div class="left">
+
+
+
+    <!-- =================================
+         MAIN CONTENT
+    ================================== -->
+
+    <main class="main">
+
+
+        <!-- =================================
+             TOP NAVBAR
+        ================================== -->
+
+        <header class="topbar">
+
+
+            <div class="menu-button">
+
                 <button id="menuBtn">
+
                     <i class="fas fa-bars"></i>
+
                 </button>
-                <h2>Dashboard</h2>
+
             </div>
-            <div class="search">
-                <input type="search" placeholder="search...">
-                <i class="fas fa-search"></i>
+
+
+            <div class="page-title">
+
+                <h1>Dashboard</h1>
+
+                <p>Overview of your business</p>
+
             </div>
-            <div class="right">
-                <div class="notification">
-                <i class="fas fa-bell"></i>
-                <span>5</span>
-                </div>
-                <button id="themeBtn">
-                    <i class="fas fa-moon"></i>
+
+
+            <div class="topbar-right">
+
+
+                <!-- Notification -->
+
+                <button class="notification-btn">
+
+                    <i class="fas fa-bell"></i>
+
+                    <span class="notification-count">
+                        3
+                    </span>
+
                 </button>
+
+
+                <!-- Profile -->
+
                 <div class="profile">
-                    <img src="IMG_0538.JPG" alt="profile">
-                    <div>
-                        <h4>George Afamefuna</h4>
-                        <p>Administrator</p>
+
+                    <div class="profile-image">
+
+                        <i class="fas fa-user"></i>
+
                     </div>
+
+
+                    <div class="profile-info">
+
+                        <strong id="profileName">
+                            Admin
+                        </strong>
+
+                        <small>
+                            Administrator
+                        </small>
+
+                    </div>
+
                 </div>
+
+
             </div>
+
+
         </header>
-        <!--welcome-->
+
+
+
+        <!-- =================================
+             GREETING
+        ================================== -->
+
         <section class="welcome">
-            <h1>Welcome Back</h1>
-            <p>Here's what's happening today.</p>
+
+
+            <div>
+
+                <h2 id="greeting">
+                    Welcome, Admin 👋
+                </h2>
+
+                <p>
+                    Here's what's happening with your business today.
+                </p>
+
+            </div>
+
 
         </section>
-        <!--dashboard cards-->
-        <section class="cards">
-            <div class="card">
-                <div class="icon users">
+
+
+
+        <!-- =================================
+             STATISTICS
+        ================================== -->
+
+        <section class="stats">
+
+
+            <!-- USERS -->
+
+            <div class="stat-card">
+
+                <div class="stat-icon users-icon">
+
                     <i class="fas fa-users"></i>
+
                 </div>
-                <div>
-                    <h3>12,450</h3>
+
+
+                <div class="stat-info">
+
                     <p>Total Users</p>
+
+                    <h3 id="totalUsers">
+                        0
+                    </h3>
+
                 </div>
+
+
             </div>
-            <div class="card">
-                 <div class="icon revenue">
-                    <i class="fas fa-dollar-sign"></i>
+
+
+
+            <!-- PRODUCTS -->
+
+            <div class="stat-card">
+
+                <div class="stat-icon products-icon">
+
+                    <i class="fas fa-box"></i>
+
                 </div>
-                <div>
-                    <h3>$45,600</h3>
-                    <p>Revenue</p>
+
+
+                <div class="stat-info">
+
+                    <p>Total Products</p>
+
+                    <h3 id="totalProducts">
+                        0
+                    </h3>
+
                 </div>
+
+
             </div>
-            <div class="card">
-                 <div class="icon orders">
-                    <i class="fas fa-cart-shopping"></i>
+
+
+
+            <!-- ORDERS -->
+
+            <div class="stat-card">
+
+                <div class="stat-icon orders-icon">
+
+                    <i class="fas fa-shopping-cart"></i>
+
                 </div>
-                <div>
-                    <h3>860</h3>
-                    <p>Orders</p>
+
+
+                <div class="stat-info">
+
+                    <p>Total Orders</p>
+
+                    <h3 id="totalOrders">
+                        0
+                    </h3>
+
                 </div>
+
+
             </div>
-            <div class="card">
-                 <div class="icon visitors">
-                    <i class="fas fa-eye"></i>
+
+
+
+            <!-- REVENUE -->
+
+            <div class="stat-card">
+
+                <div class="stat-icon revenue-icon">
+
+                    <i class="fas fa-naira-sign"></i>
+
                 </div>
-                <div>
-                    <h3>26,320</h3>
-                    <p>Visitors</p>
+
+
+                <div class="stat-info">
+
+                    <p>Total Revenue</p>
+
+                    <h3 id="totalRevenue">
+                        ₦0.00
+                    </h3>
+
                 </div>
+
+
             </div>
+
+
         </section>
-        <!--charts-->
-        <section class="charts">
-<div class="chart-box">
-    <h3>Sales Overview</h3>
-    <canvas id="salesChart"></canvas>
+
+
+
+        <!-- =================================
+             CONTENT GRID
+        ================================== -->
+
+        <section class="dashboard-grid">
+
+
+            <!-- =================================
+                 SALES CHART
+            ================================== -->
+
+            <div class="dashboard-card sales-card">
+
+
+                <div class="card-header">
+
+                    <div>
+
+                        <h2>Sales Overview</h2>
+
+                        <p>
+                            Revenue performance
+                        </p>
+
+                    </div>
+
+
+                    <select id="salesPeriod">
+
+                        <option value="7">
+                            Last 7 Days
+                        </option>
+
+                        <option value="30">
+                            Last 30 Days
+                        </option>
+
+                        <option value="12">
+                            Last 12 Months
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="chart-container">
+
+                    <canvas id="salesChart"></canvas>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- =================================
+                 ORDER STATUS
+            ================================== -->
+
+            <div class="dashboard-card">
+
+
+                <div class="card-header">
+
+                    <div>
+
+                        <h2>Order Status</h2>
+
+                        <p>
+                            Current order overview
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="chart-container">
+
+                    <canvas id="orderStatusChart"></canvas>
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =================================
+             RECENT ORDERS
+        ================================== -->
+
+        <section class="dashboard-card recent-orders">
+
+
+            <div class="card-header">
+
+
+                <div>
+
+                    <h2>Recent Orders</h2>
+
+                    <p>
+                        Latest customer orders
+                    </p>
+
+                </div>
+
+
+                <a href="orders.html"
+                   class="view-all">
+
+                    View All
+
+                </a>
+
+
+            </div>
+
+
+
+            <div class="table-container">
+
+
+                <table>
+
+
+                    <thead>
+
+                        <tr>
+
+                            <th>Order ID</th>
+
+                            <th>Customer</th>
+
+                            <th>Product</th>
+
+                            <th>Amount</th>
+
+                            <th>Date</th>
+
+                            <th>Status</th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody id="recentOrders">
+
+                        <tr>
+
+                            <td colspan="6"
+                                class="empty-message">
+
+                                No orders available.
+
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+
+                </table>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =================================
+             QUICK ACTIONS
+        ================================== -->
+
+        <section class="quick-actions">
+
+
+            <h2>Quick Actions</h2>
+
+
+            <div class="action-grid">
+
+
+                <a href="product.html"
+                   class="action-card">
+
+                    <i class="fas fa-plus-circle"></i>
+
+                    <span>
+                        Add Product
+                    </span>
+
+                </a>
+
+
+                <a href="order.html"
+                   class="action-card">
+
+                    <i class="fas fa-shopping-cart"></i>
+
+                    <span>
+                        Manage Orders
+                    </span>
+
+                </a>
+
+
+                <a href="user.html"
+                   class="action-card">
+
+                    <i class="fas fa-user-plus"></i>
+
+                    <span>
+                        Manage Users
+                    </span>
+
+                </a>
+
+
+                <a href="analytic.html"
+                   class="action-card">
+
+                    <i class="fas fa-chart-pie"></i>
+
+                    <span>
+                        View Analytics
+                    </span>
+
+                </a>
+
+
+            </div>
+
+
+        </section>
+
+
+    </main>
+
 
 </div>
-<div class="chart-box">
-    <h3>Revenue</h3>
-    <canvas id="revenueChart"></canvas>
-</div>
-        </section>
-        <!--Recent Orders-->
-        <section class="table-box">
-            <h3>Recent Orders</h3>
-            <table>
-                <thead>
-                    <tr>
-                        <th>ID</th>
-                        <th>Customer</th>
-                        <th>Product</th>
-                        <th>Status</th>
-                        <th>Amount</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>#1002</td>
-                        <td>John</td>
-                        <td>Laptop</td>
-                        <td><span class="status delivered">Delivered</span></td>
-                        <td>$320</td>
-                    </tr>
-                    <tr>
-                     <td>#1002</td>
-                        <td>Emmanuel</td>
-                        <td>Phone</td>
-                        <td><span class="status delivered">Delivered</span></td>
-                        <td>$370</td>
-                        </tr>
-                        <tr>
-                     <td>#1212</td>
-                        <td>King</td>
-                        <td>mouse</td>
-                        <td><span class="status delivered">Delivered</span></td>
-                        <td>$10</td>
-                        </tr>
-                        <tr>
-                     <td>#1022</td>
-                        <td>Samuel</td>
-                        <td>Laptop battery</td>
-                        <td><span class="status processing">processing</span></td>
-                        <td>$21</td>
-                        </tr>
-                        <tr>
-                     <td>#1012</td>
-                        <td>James</td>
-                        <td>Zealot</td>
-                        <td><span class="status pending">Pending</span></td>
-                        <td>$60</td>
-                        </tr>
-                </tbody>
-            </table>
-        </section>
-        <footer>
-            &copy;2026 AdminPro Dashboard. All Right Reserved.
-        </footer>
-    </div>
-    <!--chart.js-->
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-    <!--javascript-->
-    <script src="dash.js"></script>
+
+
+<!-- =================================
+     CHART.JS
+================================== -->
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
+<!-- =================================
+     DASHBOARD JAVASCRIPT
+================================== -->
+
+<script src="dash.js"></script>
+
+
+<!-- =================================
+     MENU SCRIPT
+================================== -->
+
+<script>
+
+const menuBtn =
+    document.getElementById("menuBtn");
+
+const sidebar =
+    document.querySelector(".sidebar");
+
+
+if(menuBtn){
+
+    menuBtn.addEventListener(
+        "click",
+        function(){
+
+            sidebar.classList.toggle(
+                "show"
+            );
+
+        }
+    );
+
+}
+
+
+// Close sidebar when clicking
+// outside on mobile
+
+document.addEventListener(
+    "click",
+    function(event){
+
+        if(
+            window.innerWidth <= 900 &&
+            sidebar.classList.contains("show") &&
+            !sidebar.contains(event.target) &&
+            !menuBtn.contains(event.target)
+        ){
+
+            sidebar.classList.remove(
+                "show"
+            );
+
+        }
+
+    }
+);
+
+
+// ==========================================
+// Logout
+// ==========================================
+
+const logoutBtn =
+    document.getElementById("logoutBtn");
+
+
+if(logoutBtn){
+
+    logoutBtn.addEventListener(
+        "click",
+        function(){
+
+            const confirmLogout =
+                confirm(
+                    "Are you sure you want to logout?"
+                );
+
+
+            if(!confirmLogout){
+
+                event.preventDefault();
+
+            }
+
+        }
+    );
+
+}
+
+</script>
+
+
 </body>
+
 </html>
